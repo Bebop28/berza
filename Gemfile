@@ -6,6 +6,9 @@ git_source(:github) do |repo_name|
 end
 
 gem 'rails',        '5.1.4'
+gem 'devise'
+gem 'twitter-bootstrap-rails'
+gem 'devise-bootstrap-views'
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
 gem 'uglifier',     '3.2.0'
@@ -22,7 +25,7 @@ end
 group :development do
   gem 'web-console',           '3.5.1'
   gem 'listen',                '3.1.5'
-  #gem 'spring',                '2.0.2'
+  #gem 'spring'                
   #gem 'spring-watcher-listen', '2.0.1'
 end
 
