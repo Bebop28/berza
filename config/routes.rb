@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'friendships/destroy'
+
   devise_for :users, :controllers => { :registrations => "user/registrations" }
   resources :user_stocks, only: [:create, :destroy]
   resources :users, only: [:show]
-  resources :frienships
+  resources :friendships
 
   
   get 'user_stocks/create'
@@ -13,4 +15,5 @@ Rails.application.routes.draw do
   get 'my_friends', to: "users#my_friends"
   get 'search_friends', to: "users#search"
   post 'add_friend', to: 'users#add_friend'
+
 end
